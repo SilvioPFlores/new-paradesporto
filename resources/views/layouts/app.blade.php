@@ -97,16 +97,14 @@
         </div>
     </div>
 
-    <!-- Faixa do Menu/Título da Página (SÓ exibe se a view definir @section('menu_title')) -->
-    @hasSection('menu_title')
-        <nav class="navbar navbar-expand corVerde">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse justify-content-center">
-                    <span class="navbar-brand mb-0 h1 nomeMenu">@yield('menu_title')</span>
-                </div>
+    <!-- Faixa do Menu/Título da Página exibe a view @section('menu_title')) -->
+    <nav class="navbar navbar-expand corVerde">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center">
+                <span class="navbar-brand mb-0 h1 nomeMenu">@yield('menu_title')</span>
             </div>
-        </nav>
-    @endif
+        </div>
+    </nav>
 
     <!-- Conteúdo Principal -->
     <main>
