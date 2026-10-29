@@ -41,11 +41,15 @@ function lingua(lang) {
     });
 }
 $(document).ready(function () {
-    $.post("visita.php",
-    {
-        visita: "true"
-    },
-    function (data) {
-        //console.log(data);
+    $.ajax({
+        url: "/visita",
+        type: "POST",
+        data: {
+            visita: "true",
+            _token: $('meta[name="csrf-token"]').attr('content')
+        },
+        success: function (data) {
+            console.log(data);
+        }
     });
 });

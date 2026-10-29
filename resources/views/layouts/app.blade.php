@@ -14,8 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
 
-    <!-- SweetAlert -->
-    <script src="{{ asset('admin/js/sweetalert.min.js') }}"></script>
+    <!-- SweetAlert2 (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Rybena (Acessibilidade) -->
     <script type="text/javascript" src="{{ asset('js/rybena.js?positionPlayer=left&positionBar=right') }}"></script>

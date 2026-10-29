@@ -1,13 +1,16 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\VisitController;
 
 Route::post('/language', [LanguageController::class, 'switch'])->name('language.switch');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/contato', [HomeController::class, 'index'])->name('contato');
+Route::post('/visita', [VisitController::class, 'record'])->name('visita.record');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
