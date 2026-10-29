@@ -47,7 +47,7 @@
             <div class="col-12 btnDireito">
                 <div class="dropdown">
                     <button class="btn btnVerde btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="{{ asset('img/head/lang-pt.png') }}" class="bandeira"> Português (Brasil)
+                        <img src="{{ asset('img/head/lang-' . __('messages.lang') . '.png') }}" class="bandeira"> {{ __('messages.lingua') }}
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="javascript:lingua('en');"><img src="{{ asset('img/head/lang-en.png') }}" class="bandeira"> English</a></li>
