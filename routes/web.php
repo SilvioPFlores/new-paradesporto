@@ -42,7 +42,7 @@ Route::get('/projeto', [ProjectController::class, 'index'])->name('projeto.index
 
 // Accessercise
 Route::get('/accessercise', function () {
-    return 'Página Accessercise (Em desenvolvimento)';
+    return view('pages.accessercise');
 })->name('accessercise');
 
 // Contato
