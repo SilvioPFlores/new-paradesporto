@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\ProfileController;
@@ -46,8 +47,7 @@ Route::get('/accessercise', function () {
 })->name('accessercise');
 
 // Contato
-Route::get('/contato', function () {
-    return 'Página de Contato (Em desenvolvimento)';
-})->name('contato');
+Route::get('/contato', [ContactController::class, 'index'])->name('contato');
+Route::post('/contato', [ContactController::class, 'send'])->name('contato.send');
 
 require __DIR__.'/auth.php';
