@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\VisitController;
+use Illuminate\Support\Facades\Route;
 
 Route::post('/language', [LanguageController::class, 'switch'])->name('language.switch');
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -37,9 +38,7 @@ Route::get('/producao', function () {
 })->name('producao.index');
 
 // Projeto
-Route::get('/projeto', function () {
-    return 'Página do Projeto (Em desenvolvimento)';
-})->name('projeto.index');
+Route::get('/projeto', [ProjectController::class, 'index'])->name('projeto.index');
 
 // Accessercise
 Route::get('/accessercise', function () {
